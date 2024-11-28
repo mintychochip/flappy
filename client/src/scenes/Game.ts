@@ -1,15 +1,5 @@
 import { Scene } from 'phaser';
-
-import io from 'socket.io-client'
-import { ClientGameState } from '../main';
-
-const socket = io('http://localhost:3000');
-
-socket.on('connect',() => {
-    console.log('Connected to server');
-    const roomName = 'r1';
-    socket.emit('joinRoom',roomName);
-});
+import {ClientGameState} from '../main';
 
 export class Game extends Scene
 {
